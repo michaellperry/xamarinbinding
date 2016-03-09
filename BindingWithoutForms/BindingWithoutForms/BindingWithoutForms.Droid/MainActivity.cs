@@ -7,6 +7,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Assisticant.Binding;
+using BindingWithoutForms.Droid.ViewModels;
+using BindingWithoutForms.Models;
+using BindingWithoutForms.Droid;
 
 namespace Lister
 {
@@ -29,7 +32,7 @@ namespace Lister
 			_bindings.Initialize (this);
 
 			_bindings.BindText(
-				FindViewById<EditText>(Resource.Id.editName),
+				FindViewById<EditText>(Resource.Id.editText1),
 				() => _viewModel.NewName,
 				s => _viewModel.NewName = s);
 			_bindings.BindCommand(
