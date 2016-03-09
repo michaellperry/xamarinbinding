@@ -38,7 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assisticant, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Assisticant.Starter.1.2.0\lib\portable-net45+netcore45+wpa81\Assisticant.dll</HintPath>
+      <HintPath>..\..\packages\Assisticant.Starter.1.2.1\lib\portable-net45+netcore45+wpa81\Assisticant.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
