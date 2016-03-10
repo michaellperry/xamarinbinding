@@ -7,7 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Assisticant.Binding;
-using BindingWithoutForms.Droid.ViewModels;
+using BindingWithoutForms.ViewModels;
 using BindingWithoutForms.Models;
 using BindingWithoutForms.Droid;
 

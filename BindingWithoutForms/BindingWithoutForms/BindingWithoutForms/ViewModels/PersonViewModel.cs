@@ -1,7 +1,7 @@
 using BindingWithoutForms.Models;
 using System;
 
-namespace BindingWithoutForms.Droid.ViewModels
+namespace BindingWithoutForms.ViewModels
 {
     public class PersonViewModel
 	{

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BindingWithoutForms.Droid.ViewModels
+namespace BindingWithoutForms.ViewModels
 {
     public class AddressBookViewModel
 	{
