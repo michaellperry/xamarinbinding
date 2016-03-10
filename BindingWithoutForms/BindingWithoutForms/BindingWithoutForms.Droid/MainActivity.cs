@@ -35,21 +35,21 @@ namespace Lister
 				FindViewById<EditText>(Resource.Id.editText1),
 				() => _viewModel.NewName,
 				s => _viewModel.NewName = s);
-			_bindings.BindCommand(
-				FindViewById<Button>(Resource.Id.buttonAdd),
-				() => _viewModel.AddPerson(),
-				() => _viewModel.CanAddPerson);
-			_bindings.BindItems(
-				FindViewById<ListView>(Resource.Id.listPeople),
-				() => _viewModel.People,
-				Android.Resource.Layout.SimpleListItem1,
-				(view, person, bindings) =>
-				{
-					bindings.BindText(
-						view.FindViewById<TextView>(Android.Resource.Id.Text1),
-						() => person.Name);
-				});
-		}
+            _bindings.BindCommand(
+                FindViewById<Button>(Resource.Id.buttonAdd),
+                () => _viewModel.AddPerson(),
+                () => _viewModel.CanAddPerson);
+            _bindings.BindItems(
+                FindViewById<ListView>(Resource.Id.listPeople),
+                () => _viewModel.People,
+                Android.Resource.Layout.SimpleListItem1,
+                (view, person, bindings) =>
+                {
+                    bindings.BindText(
+                        view.FindViewById<TextView>(Android.Resource.Id.Text1),
+                        () => person.Name);
+                });
+        }
 
 		protected override void OnDestroy()
 		{

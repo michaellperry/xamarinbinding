@@ -5,18 +5,17 @@
     android:layout_height="fill_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-  <EditText
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_toLeftOf="@+id/buttonAdd"
-      android:id="@+id/editText1"
-      android:layout_alignParentLeft="true" />
-  <Button
+    <EditText
+        android:layout_width="282.7dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:layout_alignParentLeft="true" />
+    <Button
         android:text="Add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/editText1"
-        android:id="@id/buttonAdd"
+        android:id="@+id/buttonAdd"
         android:layout_alignParentRight="true" />
     <ListView
         android:minWidth="25px"
