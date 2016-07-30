@@ -29,12 +29,12 @@ namespace Lister
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			_bindings.Initialize (this);
+            _bindings.Initialize(this);
 
-			_bindings.BindText(
-				FindViewById<EditText>(Resource.Id.editText1),
-				() => _viewModel.NewName,
-				s => _viewModel.NewName = s);
+            _bindings.BindText(
+                FindViewById<EditText>(Resource.Id.editText1),
+                () => _viewModel.NewName,
+                name => _viewModel.NewName = name);
             _bindings.BindCommand(
                 FindViewById<Button>(Resource.Id.buttonAdd),
                 () => _viewModel.AddPerson(),
@@ -43,12 +43,13 @@ namespace Lister
                 FindViewById<ListView>(Resource.Id.listPeople),
                 () => _viewModel.People,
                 Android.Resource.Layout.SimpleListItem1,
-                (view, person, bindings) =>
+                (view, personViewModel, binding) =>
                 {
-                    bindings.BindText(
+                    binding.BindText(
                         view.FindViewById<TextView>(Android.Resource.Id.Text1),
-                        () => person.Name);
+                        () => personViewModel.Name);
                 });
+
         }
 
 		protected override void OnDestroy()

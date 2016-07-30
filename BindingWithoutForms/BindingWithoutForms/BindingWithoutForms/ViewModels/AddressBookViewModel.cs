@@ -17,16 +17,10 @@ namespace BindingWithoutForms.ViewModels
 			_selection = selection;
 		}
 
-		public IEnumerable<PersonViewModel> People
-		{
-			get
-			{
-				return
-					from person in _addressBook.People
-					orderby person.Name
-					select new PersonViewModel(person);
-			}
-		}
+		public IEnumerable<PersonViewModel> People =>
+			from person in _addressBook.People
+			orderby person.Name
+			select new PersonViewModel(person);
 
 		public PersonViewModel SelectedPerson
 		{
@@ -52,10 +46,8 @@ namespace BindingWithoutForms.ViewModels
 			set { _selection.NewName = value; }
 		}
 
-		public bool CanAddPerson
-		{
-			get { return !string.IsNullOrWhiteSpace(_selection.NewName); }
-		}
+        public bool CanAddPerson =>
+            !string.IsNullOrWhiteSpace(_selection.NewName);
 
 		public void AddPerson()
 		{

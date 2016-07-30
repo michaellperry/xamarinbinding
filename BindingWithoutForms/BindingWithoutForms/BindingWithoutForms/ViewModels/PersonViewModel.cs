@@ -17,16 +17,11 @@ namespace BindingWithoutForms.ViewModels
 			get { return _person; }
 		}
 
-		public string Name
-		{
-			get
-			{
-				if (string.IsNullOrWhiteSpace(_person.Name))
-					return "<no name>";
-				else
-					return _person.Name;
-			}
-		}
+		public string Name =>
+				(string.IsNullOrWhiteSpace(_person.Name))
+					? "<no name>"
+				:
+					_person.Name;
 
 		public override bool Equals(Object obj)
 		{
